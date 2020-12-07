@@ -9,6 +9,13 @@
   </head>
 
   <body>
+
+    <header> 
+      <% if session[:session_token] == current_user.session_token %>
+         <h3> <%= current_user.user_name %> </h3>
+      <% end %>
+    </header>
+
     <%= yield %>
   </body>
 </html>
