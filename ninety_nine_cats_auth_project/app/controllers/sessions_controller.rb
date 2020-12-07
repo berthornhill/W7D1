@@ -24,9 +24,6 @@ class SessionsController < ApplicationController
 
         redirect_to session_url
     end
-             
-
-    end
 
     private
 

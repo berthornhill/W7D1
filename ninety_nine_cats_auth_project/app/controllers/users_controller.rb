@@ -6,9 +6,9 @@ class UsersController < ApplicationController
    end
 
    def create
-        debugger
+        # debugger
         @user = User.new(user_params)
-        debugger
+        # debugger
         if @user.save
             redirect_to cats_url
         else
