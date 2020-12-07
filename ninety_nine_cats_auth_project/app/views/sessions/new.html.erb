@@ -1,15 +1,15 @@
-<h1>SIGN UP NOW!!!</h1>
+<h1>Log in NOW!</h1>
 
-<form action="<%= users_url %>" method="post">
+<form action="<%= session_url %>" method="post">
  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
     <label for="username">Username</label>
-    <input type="text" name="user[username]" id="username" value="<%= @users.user_name %>">
+    <input type="text" name="user[username]" id="username" >
 
     <br>
 
     <label for="password">Password</label>
     <input type="password" name="user[password]" id="password">
-    <button>Sign-up now!</button>
+    <button>Sign-in now!</button>
 
     </form>
