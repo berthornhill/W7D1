@@ -20,9 +20,10 @@ class User < ApplicationRecord
     end
 
     def reset_session_token!
-        session_token = SecureRandom::base64(10)
+        self.session_token = SecureRandom::urlsafe_base64(10)
     end
 
     def set_session_token
+        self.session_token ||= SecureRandom::urlsafe_base64(10)
     end
 end

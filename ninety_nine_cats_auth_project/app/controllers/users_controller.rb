@@ -6,9 +6,11 @@ class UsersController < ApplicationController
    end
 
    def create
+        debugger
         @user = User.new(user_params)
+        debugger
         if @user.save
-            redirect_to user_url(@user)
+            redirect_to cats_url
         else
             flash.now[:errors] = @user.errors.full_messages
             render :new
@@ -19,6 +21,6 @@ class UsersController < ApplicationController
    private
 
    def user_params
-    params.require(:user).permit(:user_name, :password_digest, :session_token)
+    params.require(:user).permit(:user_name, :password)
    end
 end
